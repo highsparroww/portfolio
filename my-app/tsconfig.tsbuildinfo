@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/cardnav.tsx","./src/components/retrogrid.tsx","./src/components/shuffle.tsx","./src/components/spotlightcard.tsx","./src/lib/utils.ts","./src/pages/home.tsx"],"version":"5.9.3"}

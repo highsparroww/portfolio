@@ -95,30 +95,32 @@ export default function Home() {
           <div className="mx-auto max-w-4xl text-center">
             {/* Main Heading with Shuffle Effect */}
             <div className="mb-6">
-              <Shuffle
-                text="Prateek Nigam"
-                tag="h1"
-                className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
-                style={{
-                  background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                  fontFamily: "'Press Start 2P', 'Courier New', monospace",
-                  imageRendering: 'pixelated',
-                }}
-                shuffleDirection="right"
-                duration={0.5}
-                shuffleTimes={3}
-                animationMode="evenodd"
-                stagger={0.05}
-                ease="power3.out"
-                threshold={0.1}
-                triggerOnce={true}
-                triggerOnHover={true}
-                scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
-              />
-            </div>
+  <Shuffle
+    text="Prateek Nigam"
+    tag="h1"
+    className="text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl px-4"
+    style={{
+      background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
+      WebkitBackgroundClip: 'text',
+      WebkitTextFillColor: 'transparent',
+      backgroundClip: 'text',
+      fontFamily: "'Press Start 2P', cursive",
+      imageRendering: 'pixelated',
+      lineHeight: '1.3',
+      wordBreak: 'break-word',
+    }}
+    shuffleDirection="right"
+    duration={0.5}
+    shuffleTimes={3}
+    animationMode="evenodd"
+    stagger={0.05}
+    ease="power3.out"
+    threshold={0.1}
+    triggerOnce={true}
+    triggerOnHover={true}
+    scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
+  />
+</div>
 
             {/* Subheading */}
            <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-300 sm:text-xl">
@@ -153,17 +155,19 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           {/* Section Heading */}
           <div className="text-center mb-16">
-            <Shuffle
+     <Shuffle
   text="About Me"
   tag="h2"
-  className="text-4xl md:text-5xl font-bold mb-4"
+  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4"
   style={{
     background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
-    fontFamily: "'Press Start 2P', 'Courier New', monospace",
+    fontFamily: "'Press Start 2P', cursive",
     imageRendering: 'pixelated',
+    lineHeight: '1.4',
+    wordBreak: 'break-word',
   }}
   shuffleDirection="right"
   duration={0.5}
@@ -176,6 +180,7 @@ export default function Home() {
   triggerOnHover={true}
   scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
 />
+
             <div className="w-24 h-1 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full"></div>
           </div>
 
@@ -190,20 +195,162 @@ export default function Home() {
 
       {/* Skills Section */}
      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black">
-  <div className="max-w-[95%] mx-auto bg-black backdrop-blur-sm rounded-xl p-10 border border-gray-800/30 shadow-2xl">
-    {/* Section Heading */}
-    <div className="text-center mb-16">
-     <Shuffle
-  text="Skills"
+  {/* Section Heading - Outside the box */}
+  <div className="text-center mb-16">
+    <Shuffle
+      text="Skills"
+      tag="h2"
+      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4"
+      style={{
+        background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        fontFamily: "'Press Start 2P', cursive",
+        imageRendering: 'pixelated',
+        lineHeight: '1.4',
+        wordBreak: 'break-word',
+      }}
+      shuffleDirection="right"
+      duration={0.5}
+      shuffleTimes={3}
+      animationMode="evenodd"
+      stagger={0.05}
+      ease="power3.out"
+      threshold={0.1}
+      triggerOnce={true}
+      triggerOnHover={true}
+      scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
+    />
+    <div className="w-24 h-1 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full"></div>
+  </div>
+
+  {/* Skills Container with background box */}
+  <div className="max-w-[95%] mx-auto bg-black backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 lg:p-10 border border-gray-800/30 shadow-2xl">
+    {/* Skills Grid */}
+    <div className="space-y-8">
+      {/* Programming Languages */}
+      <SkillCategory
+        icon={<Code2 className="w-6 h-6" />}
+        title="Programming Languages"
+        skills={['C++', 'C', 'Python', 'JavaScript', 'TypeScript', 'Java']}
+      />
+      {/* Databases */}
+      <SkillCategory
+        icon={<Database className="w-6 h-6" />}
+        title="Databases"
+        skills={['MongoDB', 'MySQL', 'PostgreSQL', 'Redis', 'Firebase']}
+      />
+      {/* Frontend */}
+      <SkillCategory
+        icon={<Layout className="w-6 h-6" />}
+        title="Frontend"
+        skills={['React', 'Next.js', 'Tailwind CSS', 'GSAP', 'Framer Motion']}
+      />
+      {/* Backend */}
+      <SkillCategory
+        icon={<Server className="w-6 h-6" />}
+        title="Backend"
+        skills={['Node.js', 'Express', 'REST APIs', 'GraphQL', 'Socket.io']}
+      />
+    </div>
+  </div>
+</section>
+<section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black">
+  {/* Section Heading - Outside the container */}
+  <div className="text-center mb-16">
+    <Shuffle
+      text="Projects"
+      tag="h2"
+      className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 px-4"
+      style={{
+        background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text',
+        fontFamily: "'Press Start 2P', cursive",
+        imageRendering: 'pixelated',
+        lineHeight: '1.4',
+        wordBreak: 'break-word',
+      }}
+      shuffleDirection="right"
+      duration={0.5}
+      shuffleTimes={3}
+      animationMode="evenodd"
+      stagger={0.05}
+      ease="power3.out"
+      threshold={0.1}
+      triggerOnce={true}
+      triggerOnHover={true}
+      scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
+    />
+    <div className="w-24 h-1 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full"></div>
+  </div>
+
+  {/* Projects Container */}
+  <div className="max-w-7xl mx-auto">
+    {/* Projects Grid - 4 Equal Cards in 2x2 Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Project 1 */}
+      <ProjectCard
+        title="E-Commerce Platform"
+        description="Full-stack e-commerce solution with real-time inventory management, secure payment integration, and admin dashboard"
+        image="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop"
+        tags={["React", "Node.js", "MongoDB", "Stripe"]}
+        github="#"
+        live="#"
+      />
+
+      {/* Project 2 */}
+      <ProjectCard
+        title="AI Chat Assistant"
+        description="Intelligent chatbot powered by natural language processing and machine learning"
+        image="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
+        tags={["Python", "TensorFlow", "React"]}
+        github="#"
+        live="#"
+      />
+
+      {/* Project 3 */}
+      <ProjectCard
+        title="Task Management App"
+        description="Collaborative project management tool with real-time updates and team collaboration"
+        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
+        tags={["Next.js", "Firebase", "Tailwind"]}
+        github="#"
+        live="#"
+      />
+
+      {/* Project 4 */}
+      <ProjectCard
+        title="Weather Dashboard"
+        description="Beautiful weather data visualization with real-time updates, forecasts, and interactive maps"
+        image="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop"
+        tags={["React", "API", "D3.js", "GSAP"]}
+        github="#"
+        live="#"
+      />
+    </div>
+  </div>
+</section>
+      {/* Contact Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Heading */}
+          <div className="text-center mb-16">
+          <Shuffle
+  text="Get In Touch"
   tag="h2"
-  className="text-4xl md:text-5xl font-bold mb-4"
+  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-4"
   style={{
     background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
     backgroundClip: 'text',
-    fontFamily: "'Press Start 2P', 'Courier New', monospace",
+    fontFamily: "'Press Start 2P', cursive",
     imageRendering: 'pixelated',
+    lineHeight: '1.4',
+    wordBreak: 'break-word',
   }}
   shuffleDirection="right"
   duration={0.5}
@@ -216,143 +363,6 @@ export default function Home() {
   triggerOnHover={true}
   scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
 />
-      <div className="w-24 h-1 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full"></div>
-    </div>
-
-    {/* Skills Grid */}
-    <div className="space-y-8">
-      {/* Programming Languages */}
-      <SkillCategory
-        icon={<Code2 className="w-6 h-6" />}
-        title="Programming Languages"
-        skills={['C++', 'C', 'Python', 'JavaScript', 'TypeScript', 'Java']}
-      />
-
-      {/* Databases */}
-      <SkillCategory
-        icon={<Database className="w-6 h-6" />}
-        title="Databases"
-        skills={['MongoDB', 'MySQL', 'PostgreSQL', 'Redis', 'Firebase']}
-      />
-
-      {/* Frontend */}
-      <SkillCategory
-        icon={<Layout className="w-6 h-6" />}
-        title="Frontend"
-        skills={['React', 'Next.js', 'Tailwind CSS', 'GSAP', 'Framer Motion']}
-      />
-
-      {/* Backend */}
-      <SkillCategory
-        icon={<Server className="w-6 h-6" />}
-        title="Backend"
-        skills={['Node.js', 'Express', 'REST APIs', 'GraphQL', 'Socket.io']}
-      />
-    </div>
-  </div>
-</section>
-<section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Heading */}
-          <div className="text-center mb-16">
-            <Shuffle
-              text="Projects"
-              tag="h2"
-              className="text-4xl md:text-5xl font-bold mb-4"
-              style={{
-                background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                fontFamily: "'Press Start 2P', 'Courier New', monospace",
-                imageRendering: 'pixelated',
-              }}
-              shuffleDirection="right"
-              duration={0.5}
-              shuffleTimes={3}
-              animationMode="evenodd"
-              stagger={0.05}
-              ease="power3.out"
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover={true}
-              scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
-            />
-            <div className="w-24 h-1 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full"></div>
-          </div>
-
-          {/* Projects Grid - 4 Equal Cards in 2x2 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Project 1 */}
-            <ProjectCard
-              title="E-Commerce Platform"
-              description="Full-stack e-commerce solution with real-time inventory management, secure payment integration, and admin dashboard"
-              image="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop"
-              tags={["React", "Node.js", "MongoDB", "Stripe"]}
-              github="#"
-              live="#"
-            />
-
-            {/* Project 2 */}
-            <ProjectCard
-              title="AI Chat Assistant"
-              description="Intelligent chatbot powered by natural language processing and machine learning"
-              image="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop"
-              tags={["Python", "TensorFlow", "React"]}
-              github="#"
-              live="#"
-            />
-
-            {/* Project 3 */}
-            <ProjectCard
-              title="Task Management App"
-              description="Collaborative project management tool with real-time updates and team collaboration"
-              image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop"
-              tags={["Next.js", "Firebase", "Tailwind"]}
-              github="#"
-              live="#"
-            />
-
-            {/* Project 4 */}
-            <ProjectCard
-              title="Weather Dashboard"
-              description="Beautiful weather data visualization with real-time updates, forecasts, and interactive maps"
-              image="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=600&fit=crop"
-              tags={["React", "API", "D3.js", "GSAP"]}
-              github="#"
-              live="#"
-            />
-          </div>
-        </div>
-      </section>
-      {/* Contact Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black">
-        <div className="max-w-7xl mx-auto">
-          {/* Section Heading */}
-          <div className="text-center mb-16">
-            <Shuffle
-              text="Get In Touch"
-              tag="h2"
-              className="text-4xl md:text-5xl font-bold mb-4"
-              style={{
-                background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                fontFamily: "'Press Start 2P', 'Courier New', monospace",
-                imageRendering: 'pixelated',
-              }}
-              shuffleDirection="right"
-              duration={0.5}
-              shuffleTimes={3}
-              animationMode="evenodd"
-              stagger={0.05}
-              ease="power3.out"
-              threshold={0.1}
-              triggerOnce={true}
-              triggerOnHover={true}
-              scrambleCharset="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*"
-            />
             <div className="w-24 h-1 mx-auto bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 rounded-full"></div>
           </div>
 
@@ -1057,15 +1067,16 @@ function ContactChannels() {
       />
 
       <div className="relative z-10">
-        <h3 className="text-xl font-bold mb-6" style={{
-          fontFamily: "'Press Start 2P', 'Courier New', monospace",
-          background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}>
-          CONTACT CHANNELS
-        </h3>
+       <h3 className="text-base sm:text-lg md:text-xl font-bold mb-6" style={{
+  fontFamily: "'Press Start 2P', cursive",
+  background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundClip: 'text',
+  lineHeight: '1.4',
+}}>
+  CONTACT CHANNELS
+</h3>
 
         <div className="space-y-3">
           {/* Email */}
@@ -1226,16 +1237,7 @@ function SendMessageForm() {
       />
 
       <div className="relative z-10">
-        <h3 className="text-xl font-bold mb-6" style={{
-          fontFamily: "'Press Start 2P', 'Courier New', monospace",
-          background: 'linear-gradient(to right, #c084fc, #f9a8d4, #93c5fd)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}>
-          SEND MESSAGE
-        </h3>
-
+     
         <form className="space-y-4">
           {/* Name Input */}
           <div>
