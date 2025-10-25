@@ -10,4 +10,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    cssMinify: true,          // Minify CSS
+    minify: 'esbuild',        // Use fast minification
+    sourcemap: false,         // Disable sourcemaps for smaller builds
+    chunkSizeWarningLimit: 1000, // Optional: Avoid warnings for large files
+  },
 })
