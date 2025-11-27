@@ -94,7 +94,7 @@ export default function Home() {
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             {/* Main Heading with Shuffle Effect */}
-            <div className="mb-6">
+           <div className="mb-6">
   <Shuffle
     text="Prateek Nigam"
     tag="h1"
@@ -105,9 +105,10 @@ export default function Home() {
       WebkitTextFillColor: 'transparent',
       backgroundClip: 'text',
       fontFamily: "'Press Start 2P', cursive",
-      imageRendering: 'pixelated',
       lineHeight: '1.3',
       wordBreak: 'break-word',
+      willChange: 'transform',
+      transform: 'translateZ(0)',
     }}
     shuffleDirection="right"
     duration={0.5}
@@ -1293,4 +1294,5 @@ function SendMessageForm() {
       </div>
     </div>
   );
+
 }
